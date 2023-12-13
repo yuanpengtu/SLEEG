@@ -1,0 +1,40 @@
+{
+	"metrics": {
+		"PixBinaryClass.area_PRC": "AP",
+		"PixBinaryClass.tpr95_fpr": "",
+		"PixBinaryClass.best_f1": ""
+	},
+	"datasets": {
+		"FishyLAFObstacle-test": "FishyLAF-test",
+		"FishyLAFObstacle-val": "FishyLAF-val",
+		"LostAndFound-testValid": "LAF-test",
+		"LostAndFound-trainValid": "LAF-train",
+		"ObstacleTrack-snowstorm": "Snowstorm"
+	},
+	"methods": {
+		"ImgBlur05VsInp-ds2b-NoiseImg-gtRoad": "Ours - road ground truth",
+		"ImgBlur05VsInp-ds2b-NoiseImg": "Ours",
+
+		"outlierheadrandompatches": "Outlier Detection Head",
+		"dirichletentropy": "Dirichlet DeepLab",
+		"mindensity": "Embedding Density - minimum NLL",
+		"densitysinglelayer": "Embedding Density - single-layer NLL",
+		"voidclassifier": "OoD training - void classifier",
+		"dropout": "Bayesian DeepLab",
+		"softmaxentropy": "DeepLab Softmax - entropy",
+		"Resynth2048Orig": "Resynthesis"
+	},
+	"plots": {
+		"ImgBlur05VsInp-ds2b-NoiseImg-gtRoad": "k :",
+		"ImgBlur05VsInp-ds2b-NoiseImg": "k -",
+
+		"outlierheadrandompatches": "g -.",
+		"dirichletentropy": "r -",
+		"mindensity": "mediumturquoise --",
+		"densitysinglelayer": "y",
+		"voidclassifier": "y",
+		"dropout": "red :",
+		"softmaxentropy": "orange -.",
+		"Resynth2048Orig": "blueviolet --"
+	}
+} 

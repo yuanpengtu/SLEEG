@@ -1,0 +1,61 @@
+{
+	"metrics": {
+		"PixBinaryClass.area_PRC": "AP",
+		"PixBinaryClass.tpr95_fpr": "",
+		"PixBinaryClass.best_f1": "",
+		"SegEval-ObstacleTrack.fn_25": "",
+		"SegEval-ObstacleTrack.fp_25": "",
+		"SegEval-ObstacleTrack.f1_25": "",
+		"SegEval-ObstacleTrack.fn_50": "",
+		"SegEval-ObstacleTrack.fp_50": "",
+		"SegEval-ObstacleTrack.f1_50": "",
+		"SegEval-ObstacleTrack.fn_75": "",
+		"SegEval-ObstacleTrack.fp_75": "",
+		"SegEval-ObstacleTrack.f1_75": "",
+		"SegEval-ObstacleTrack.sIoU_pred": "",
+		"SegEval-ObstacleTrack.sIoU_gt": "",
+		"SegEval-ObstacleTrack.f1_mean": "F1"
+	},
+	"datasets": {
+		"FishyLAFObstacle-test": "FishyLAF-test",
+		"FishyLAFObstacle-val": "FishyLAF-val",
+		"LostAndFound-testValid": "LAF-test",
+		"LostAndFound-trainValid": "LAF-train",
+		"ObstacleTrack-snowstorm": "Snowstorm",
+		
+		"ObstacleScene-curvy": "curvy",
+		"ObstacleScene-darkasphalt": "darkasphalt",
+		"ObstacleScene-darkasphaltDog": "darkasphaltDog",
+		"ObstacleScene-darkasphaltAll": "darkasphaltAll",
+		"ObstacleScene-gravel": "gravel",
+		"ObstacleScene-greyasphalt": "greyasphalt",
+		"ObstacleScene-motorway": "motorway",
+		"ObstacleScene-shiny": "shiny",
+		"ObstacleScene-paving": "paving",
+		"ObstacleScene-night": "night",
+		"ObstacleScene-snowstorm": "snowstorm"
+	},
+	"methods": {
+		"ImgBlur05VsInp-ds2-NoiseImg-gtRoad": "Image vs Inpainting + blur + noise aug. + GT road area",
+		"ImgBlur05VsInp-ds2-NoiseImg": "Image vs Inpainting + blur + noise aug.",
+		"ImgBlur05VsInp-ds2": "Image vs Inpainting + blur",
+		"ImgVsInp-ds2-NoiseImg": "Image vs Inpainting + noise aug.",
+		"ImgBlur05VsSelf-ds2-NoiseImg": "Single image only + blur + noise aug.",
+		"Island": "Segmenter Island",	
+
+		"ImgBlur05VsInp-ds2b-NoiseImg-gtRoad": "Ours & road ground truth",
+		"ImgBlur05VsInp-ds2b-NoiseImg": "Ours & road segmentation",
+		"ImgBlur05VsInp-ds2b": "Ours w/o noise aug.",
+		"ImgVsInp-ds2b-NoiseImg": "Ours w/o blur.",
+		"ImgVsInp-ds2b": "without noise, without blur",
+		"ImgBlur05VsSelf-ds2b-NoiseImg": "No Inpainting.",
+
+		"mindensity": "Embedding Density",
+		"voidclassifier": "Void classifier",
+		"dropout": "MC droput",
+		"Resynth2048Orig": "Image Resynthesis"
+	},
+	"plots": {
+		
+	}
+} 

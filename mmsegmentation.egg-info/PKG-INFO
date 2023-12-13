@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: mmsegmentation
+Version: 0.27.0
+Summary: Open MMLab Semantic Segmentation Toolbox and Benchmark
+Home-page: http://github.com/open-mmlab/mmsegmentation
+Author: MMSegmentation Contributors
+Author-email: openmmlab@gmail.com
+License: Apache License 2.0
+Keywords: computer vision,semantic segmentation
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+Provides-Extra: all
+Provides-Extra: tests
+Provides-Extra: build
+Provides-Extra: optional
+Provides-Extra: mim
+License-File: LICENSE
+License-File: LICENSES.md
+
+### Code
+
+项目基于mmsegmentation, 主要代码在以下目录
+
+- `configs/exps` : 目前实验使用的配置文件, deeplabv3.py对应基础的分割网络训练，deeplabv3_patch.py对应带异常检测头的网络训练
+- `core` : 主要用到的一些模型结构和功能函数的定义
+- `script/anomaly` : 下面主要是测试和验证脚本
+- `road_utils` : 是从segmentme数据集的代码仓库克隆过来的，封装了推理road_anomaly的一些步骤，暂时可以不管
+
+### Data
+- 分割数据在./data/cityscape下面，训练标签通过官方的脚本已经处理过
+- 异常检测数据目前放在./data/segmentme下面，
+分别包括dataset_AnomalyTrack, dataset_ObstacleTrack以及dataset_FishyLAF，验证工作主要是在dataset_FishyLAF的一百张标注验证集上做
+
+### Model
+
+目前已经训练好的一个分割模型文件在`results/deeplabv3/iter_40000.pth`, 单尺度测试mIOU为79.3
+
+### TODO
+- 目前需要对照验证集上的对照实验以确保方法效果处于什么梯队，考虑在开源方法[SML](https://github.com/shjung13/Standardized-max-logits)
+和[DenseHybrid](https://github.com/matejgrcic/DenseHybrid) 上测试验证集效果，也可以尝试复现一些其他开源方法
+
+
